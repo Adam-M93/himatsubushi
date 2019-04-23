@@ -9,7 +9,9 @@ void main()
 	FadeOutBGM( 1, 1000, TRUE );
 	DisableWindow();
 	DrawScene("white", 400 );
-	PlayBGM( 2, "lsys22", 128, 0 );
+	if (GetGlobalFlag(GAltSEflow) == 0) { 	PlayBGM( 2, "lsys22", 128, 0 ); }
+	if (GetGlobalFlag(GAltSEflow) == 1) { 	PlayBGM( 2, "Original\lsys22", 128, 0 ); }
+	if (GetGlobalFlag(GAltSEflow) == 2) { 	PlayBGM( 2, "April2019Update\lsys22", 128, 0 ); }
 	DrawSceneWithMask("background/hoteru", "m1", 0, 0, 300 );
 
 //　市内の安ホテルでの目覚めは、お世辞にも快適とは言えなかった￥
@@ -471,7 +473,9 @@ void main()
 	FadeOutBGM( 2, 1000, TRUE );
 	DrawScene("white", 400 );
 	DrawSceneWithMask("background/kuruma6", "m1", 0, 0, 600 );
-	PlayBGM( 2, "lsys20", 128, 0 );
+	if (GetGlobalFlag(GAltSEflow) == 0) { 	PlayBGM( 2, "lsys20", 128, 0 ); }
+	if (GetGlobalFlag(GAltSEflow) == 1) { 	PlayBGM( 2, "Original\lsys20", 128, 0 ); }
+	if (GetGlobalFlag(GAltSEflow) == 2) { 	PlayBGM( 2, "April2019Update\lsys20", 128, 0 ); }
 
 //　…廃線間近だと教えられたバスは、とてもそんな風には見えなかった￥
 	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
@@ -656,8 +660,12 @@ void main()
 	FadeOutBGM( 2, 1000, TRUE );
 	DisableWindow();
 	DrawScene("white", 400 );
-	PlayBGM( 1, "msys12", 128, 0 );
-	PlayBGM( 2, "lsys22", 128, 0 );
+	if (GetGlobalFlag(GAltSEflow) == 0) { 	PlayBGM( 1, "msys12", 128, 0 ); }
+	if (GetGlobalFlag(GAltSEflow) == 1) { 	PlayBGM( 1, "Original\msys12", 128, 0 ); }
+	if (GetGlobalFlag(GAltSEflow) == 2) { 	PlayBGM( 1, "April2019Update\msys12", 128, 0 ); }
+	if (GetGlobalFlag(GAltSEflow) == 0) { 	PlayBGM( 2, "lsys22", 128, 0 ); }
+	if (GetGlobalFlag(GAltSEflow) == 1) { 	PlayBGM( 2, "Original\lsys22", 128, 0 ); }
+	if (GetGlobalFlag(GAltSEflow) == 2) { 	PlayBGM( 2, "April2019Update\lsys22", 128, 0 ); }
 	DrawSceneWithMask("background/mo_b1", "m1", 0, 0, 300 );
 
 //　実際、停車した場所は非常に寂れていて、普段はほとんど使われていないのが見て取れた＠
@@ -783,7 +791,9 @@ void main()
 	FadeOutBGM( 1, 1000, FALSE );
 	FadeOutBGM( 2, 1000, TRUE );
 	DisableWindow();
-	PlaySE( 3, "wa_027", 128, 64 );
+	if (GetGlobalFlag(GAltSEflow) == 0) { 	PlaySE( 3, "wa_027", 128, 64 ); }
+	if (GetGlobalFlag(GAltSEflow) == 1) { 	PlaySE( 3, "Original\wa_027", 128, 64 ); }
+	if (GetGlobalFlag(GAltSEflow) == 2) { 	PlaySE( 3, "April2019Update\wa_027", 128, 64 ); }
 	DrawScene("scene/eye", 300 );
 
 
@@ -894,8 +904,12 @@ void main()
 	ClearMessage();
 
 	DisableWindow();
-	PlayBGM( 1, "msys12", 128, 0 );
-	PlayBGM( 2, "lsys22", 128, 0 );
+	if (GetGlobalFlag(GAltSEflow) == 0) { 	PlayBGM( 1, "msys12", 128, 0 ); }
+	if (GetGlobalFlag(GAltSEflow) == 1) { 	PlayBGM( 1, "Original\msys12", 128, 0 ); }
+	if (GetGlobalFlag(GAltSEflow) == 2) { 	PlayBGM( 1, "April2019Update\msys12", 128, 0 ); }
+	if (GetGlobalFlag(GAltSEflow) == 0) { 	PlayBGM( 2, "lsys22", 128, 0 ); }
+	if (GetGlobalFlag(GAltSEflow) == 1) { 	PlayBGM( 2, "Original\lsys22", 128, 0 ); }
+	if (GetGlobalFlag(GAltSEflow) == 2) { 	PlayBGM( 2, "April2019Update\lsys22", 128, 0 ); }
 	DrawScene("background/mo_b1", 400 );
 
 //　……全身に、じっとりとした薄い汗が浮く＠
@@ -1041,7 +1055,9 @@ void main()
 	DrawScene("scene/201a", 1000 );
 
 
-	PlayBGM( 1, "msys26", 128, 0 );
+	if (GetGlobalFlag(GAltBGMflow) == 0) { 	PlayBGM( 1, "msys26", 128, 0 ); }
+	if (GetGlobalFlag(GAltBGMflow) == 1) { 	PlayBGM( 1, "Original\msys26", 128, 0 ); }
+	if (GetGlobalFlag(GAltBGMflow) == 2) { 	PlayBGM( 1, "April2019Update\msys26", 128, 0 ); }
 
 //　筆書きで、ダム政策を罵るように批判した文書や決起文が一面に張られた小屋内で、………とろんとした眼差しで、…半分、眠りかけたように、……少女は座っていた＠
 	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
@@ -1236,7 +1252,9 @@ void main()
 	DisableWindow();
 	ModDrawCharacter(2, 27, "sprite/normal/rim_komaru_", "0", 160, 0, 0, FALSE, 0, 0, 0, 0, 0, 0, 0, 10, 0, FALSE );
 	DrawScene("background/m_hi4", 400 );
-	PlayBGM( 1, "msysRi", 128, 0 );
+	if (GetGlobalFlag(GAltBGMflow) == 0) { 	PlayBGM( 1, "msysRi", 128, 0 ); }
+	if (GetGlobalFlag(GAltBGMflow) == 1) { 	PlayBGM( 1, "Original\msysRi", 128, 0 ); }
+	if (GetGlobalFlag(GAltBGMflow) == 2) { 	PlayBGM( 1, "April2019Update\msysRi", 128, 0 ); }
 
 //「……みぃ。￥
 	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#6972c1>少女</color>", NULL, "<color=#6972c1>Little Girl</color>", NULL, Line_ContinueAfterTyping); }
@@ -1565,7 +1583,9 @@ void main()
 
 	DisableWindow();
 	DrawSceneWithMask("background/m_hi4", "right", 0, 0, 300 );
-	PlayBGM( 1, "msys01", 128, 0 );
+	if (GetGlobalFlag(GAltBGMflow) == 0) { 	PlayBGM( 1, "msys01", 128, 0 ); }
+	if (GetGlobalFlag(GAltBGMflow) == 1) { 	PlayBGM( 1, "Original\msys01", 128, 0 ); }
+	if (GetGlobalFlag(GAltBGMflow) == 2) { 	PlayBGM( 1, "April2019Update\msys01", 128, 0 ); }
 
 //「どぅもごんにちわ～＠　遅れて申し訳ないこってす＠　昨日、お電話を下さった観光の方ですかねぇ？＠
 	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#f5e6d3>老人</color>", NULL, "<color=#f5e6d3>Old person</color>", NULL, Line_ContinueAfterTyping); }
@@ -1903,9 +1923,13 @@ void main()
 
 	DisableWindow();
 	FadeBustshotWithFiltering( 1, "left", 1, FALSE, 0, 0, 300, TRUE );
-	PlaySE( 4, "wa_029", 128, 64 );
+	if (GetGlobalFlag(GAltSEflow) == 0) { 	PlaySE( 4, "wa_029", 128, 64 ); }
+	if (GetGlobalFlag(GAltSEflow) == 1) { 	PlaySE( 4, "Original\wa_029", 128, 64 ); }
+	if (GetGlobalFlag(GAltSEflow) == 2) { 	PlaySE( 4, "April2019Update\wa_029", 128, 64 ); }
 	Wait( 500 );
-	PlaySE( 4, "wa_029", 128, 64 );
+	if (GetGlobalFlag(GAltSEflow) == 0) { 	PlaySE( 4, "wa_029", 128, 64 ); }
+	if (GetGlobalFlag(GAltSEflow) == 1) { 	PlaySE( 4, "Original\wa_029", 128, 64 ); }
+	if (GetGlobalFlag(GAltSEflow) == 2) { 	PlaySE( 4, "April2019Update\wa_029", 128, 64 ); }
 
 //　梨花ちゃんは、私を押しのけて真っ先に座席に飛び込むと魚のように跳ね回った＠
 	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
@@ -2133,26 +2157,36 @@ void main()
 	SetValidityOfUserEffectSpeed( FALSE );
 	DisableWindow();
 	DrawScene("black", 400 );
-	PlayBGM( 1, "msys29", 128, 0 );
+	if (GetGlobalFlag(GAltBGMflow) == 0) { 	PlayBGM( 1, "msys29", 128, 0 ); }
+	if (GetGlobalFlag(GAltBGMflow) == 1) { 	PlayBGM( 1, "Original\msys29", 128, 0 ); }
+	if (GetGlobalFlag(GAltBGMflow) == 2) { 	PlayBGM( 1, "April2019Update\msys29", 128, 0 ); }
 	DrawSceneWithMask("background/mo2", "c", 0, 0, 1800 );
 	DrawBustshot(5, "white", 0, 0, 0, FALSE, 0, 0, 0, 0, 0, 0, 0, 25, 100, TRUE );
-	PlaySE( 4, "wa_013", 128, 64 );
+	if (GetGlobalFlag(GAltSEflow) == 0) { 	PlaySE( 4, "wa_013", 128, 64 ); }
+	if (GetGlobalFlag(GAltSEflow) == 1) { 	PlaySE( 4, "Original\wa_013", 128, 64 ); }
+	if (GetGlobalFlag(GAltSEflow) == 2) { 	PlaySE( 4, "April2019Update\wa_013", 128, 64 ); }
 	FadeBustshot( 5, FALSE, 0, 0, 0, 0, 500, TRUE );
 	Wait( 500 );
 	ModDrawCharacter(2, 27, "sprite/normal/rim_komaru_", "0", 0, 0, 0, FALSE, 0, 0, 0, 0, 0, 0, 0, 10, 0, FALSE );
 	DrawSceneWithMask("background/hasi3", "c", 0, 0, 1800 );
 	DrawBustshot(5, "white", 0, 0, 0, FALSE, 0, 0, 0, 0, 0, 0, 0, 25, 100, TRUE );
-	PlaySE( 4, "wa_013", 128, 64 );
+	if (GetGlobalFlag(GAltSEflow) == 0) { 	PlaySE( 4, "wa_013", 128, 64 ); }
+	if (GetGlobalFlag(GAltSEflow) == 1) { 	PlaySE( 4, "Original\wa_013", 128, 64 ); }
+	if (GetGlobalFlag(GAltSEflow) == 2) { 	PlaySE( 4, "April2019Update\wa_013", 128, 64 ); }
 	FadeBustshot( 5, FALSE, 0, 0, 0, 0, 500, TRUE );
 	Wait( 500 );
 	DrawSceneWithMask("background/hi9", "c", 0, 0, 1800 );
 	DrawBustshot(5, "white", 0, 0, 0, FALSE, 0, 0, 0, 0, 0, 0, 0, 25, 100, TRUE );
-	PlaySE( 4, "wa_013", 128, 64 );
+	if (GetGlobalFlag(GAltSEflow) == 0) { 	PlaySE( 4, "wa_013", 128, 64 ); }
+	if (GetGlobalFlag(GAltSEflow) == 1) { 	PlaySE( 4, "Original\wa_013", 128, 64 ); }
+	if (GetGlobalFlag(GAltSEflow) == 2) { 	PlaySE( 4, "April2019Update\wa_013", 128, 64 ); }
 	FadeBustshot( 5, FALSE, 0, 0, 0, 0, 500, TRUE );
 	Wait( 500 );
 	DrawSceneWithMask("background/hi3", "c", 0, 0, 1800 );
 	DrawBustshot(5, "white", 0, 0, 0, FALSE, 0, 0, 0, 0, 0, 0, 0, 25, 100, TRUE );
-	PlaySE( 4, "wa_013", 128, 64 );
+	if (GetGlobalFlag(GAltSEflow) == 0) { 	PlaySE( 4, "wa_013", 128, 64 ); }
+	if (GetGlobalFlag(GAltSEflow) == 1) { 	PlaySE( 4, "Original\wa_013", 128, 64 ); }
+	if (GetGlobalFlag(GAltSEflow) == 2) { 	PlaySE( 4, "April2019Update\wa_013", 128, 64 ); }
 	FadeBustshot( 5, FALSE, 0, 0, 0, 0, 500, TRUE );
 	Wait( 500 );
 	ModDrawCharacter(1, 27, "sprite/normal/rim_def_", "0", -300, 249, -800, FALSE, 0, 0, 0, 0, 0, 0, 0, 0, 0, FALSE );
@@ -2160,18 +2194,24 @@ void main()
 	DrawSceneWithMask("background/mo1", "c", 0, 0, 1800 );
 	MoveSprite( 1, -300, 167, -800, -20, 0, 0, 0, 1000, TRUE );
 	DrawBustshot(5, "white", 0, 0, 0, FALSE, 0, 0, 0, 0, 0, 0, 0, 25, 100, TRUE );
-	PlaySE( 4, "wa_013", 128, 64 );
+	if (GetGlobalFlag(GAltSEflow) == 0) { 	PlaySE( 4, "wa_013", 128, 64 ); }
+	if (GetGlobalFlag(GAltSEflow) == 1) { 	PlaySE( 4, "Original\wa_013", 128, 64 ); }
+	if (GetGlobalFlag(GAltSEflow) == 2) { 	PlaySE( 4, "April2019Update\wa_013", 128, 64 ); }
 	FadeBustshot( 5, FALSE, 0, 0, 0, 0, 500, TRUE );
 	Wait( 500 );
 	DrawSceneWithMask("background/ie1", "c", 0, 0, 1800 );
 	DrawBustshot(5, "white", 0, 0, 0, FALSE, 0, 0, 0, 0, 0, 0, 0, 25, 100, TRUE );
-	PlaySE( 4, "wa_013", 128, 64 );
+	if (GetGlobalFlag(GAltSEflow) == 0) { 	PlaySE( 4, "wa_013", 128, 64 ); }
+	if (GetGlobalFlag(GAltSEflow) == 1) { 	PlaySE( 4, "Original\wa_013", 128, 64 ); }
+	if (GetGlobalFlag(GAltSEflow) == 2) { 	PlaySE( 4, "April2019Update\wa_013", 128, 64 ); }
 	FadeBustshot( 5, FALSE, 0, 0, 0, 0, 500, TRUE );
 	Wait( 500 );
 	ModDrawCharacter(2, 27, "sprite/normal/rim_warai_", "0", 160, 0, 0, FALSE, 0, 0, 0, 0, 0, 0, 0, 10, 0, FALSE );
 	DrawSceneWithMask("background/kawa1", "c", 0, 0, 1800 );
 	DrawBustshot(5, "white", 0, 0, 0, FALSE, 0, 0, 0, 0, 0, 0, 0, 25, 100, TRUE );
-	PlaySE( 4, "wa_013", 128, 64 );
+	if (GetGlobalFlag(GAltSEflow) == 0) { 	PlaySE( 4, "wa_013", 128, 64 ); }
+	if (GetGlobalFlag(GAltSEflow) == 1) { 	PlaySE( 4, "Original\wa_013", 128, 64 ); }
+	if (GetGlobalFlag(GAltSEflow) == 2) { 	PlaySE( 4, "April2019Update\wa_013", 128, 64 ); }
 	FadeBustshot( 5, FALSE, 0, 0, 0, 0, 500, TRUE );
 	Wait( 500 );
 	DrawScene("white", 1800 );
@@ -2195,7 +2235,9 @@ void main()
 
 //setwindow 31,16,22,16,26,26,0,2,20,1,1,#999999,0,0,639,479
 //!sd
-	PlayBGM( 2, "lsys12", 128, 0 );
+	if (GetGlobalFlag(GAltSEflow) == 0) { 	PlayBGM( 2, "lsys12", 128, 0 ); }
+	if (GetGlobalFlag(GAltSEflow) == 1) { 	PlayBGM( 2, "Original\lsys12", 128, 0 ); }
+	if (GetGlobalFlag(GAltSEflow) == 2) { 	PlayBGM( 2, "April2019Update\lsys12", 128, 0 ); }
 
 //　…老人（牧野氏というらしい＠…鬼ヶ淵死守同盟の会計監査の牧野氏と同一人物？＠が案内してくれる場所はどこも絶景で、観光の目的で訪れているわけではない私でも、うなるような景色が溢れていた￥
 	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
@@ -2219,7 +2261,9 @@ void main()
 	DrawSceneWithMask("background/hi5", "left", 0, 0, 300 );
 	Wait( 300 );
 	DrawBustshot(5, "white", 0, 0, 0, FALSE, 0, 0, 0, 0, 0, 0, 0, 25, 100, TRUE );
-	PlaySE( 4, "wa_013", 128, 64 );
+	if (GetGlobalFlag(GAltSEflow) == 0) { 	PlaySE( 4, "wa_013", 128, 64 ); }
+	if (GetGlobalFlag(GAltSEflow) == 1) { 	PlaySE( 4, "Original\wa_013", 128, 64 ); }
+	if (GetGlobalFlag(GAltSEflow) == 2) { 	PlaySE( 4, "April2019Update\wa_013", 128, 64 ); }
 	FadeBustshot( 5, FALSE, 0, 0, 0, 0, 500, TRUE );
 
 //　初めは、観光客を装うつもりでシャッターを切っていたが、途中から純粋な興味で写真を撮るようになっていた￥
@@ -2250,7 +2294,9 @@ void main()
 	DrawSceneWithMask("background/ta2", "right", 0, 0, 300 );
 	Wait( 300 );
 	DrawBustshot(5, "white", 0, 0, 0, FALSE, 0, 0, 0, 0, 0, 0, 0, 25, 100, TRUE );
-	PlaySE( 4, "wa_013", 128, 64 );
+	if (GetGlobalFlag(GAltSEflow) == 0) { 	PlaySE( 4, "wa_013", 128, 64 ); }
+	if (GetGlobalFlag(GAltSEflow) == 1) { 	PlaySE( 4, "Original\wa_013", 128, 64 ); }
+	if (GetGlobalFlag(GAltSEflow) == 2) { 	PlaySE( 4, "April2019Update\wa_013", 128, 64 ); }
 	FadeBustshot( 5, FALSE, 0, 0, 0, 0, 500, TRUE );
 	ModDrawCharacter(3, 27, "sprite/normal/rim_warai_", "2", 160, 0, 0, FALSE, 0, 0, 0, 0, 0, 0, 0, 20, 300, TRUE );
 
@@ -2628,7 +2674,9 @@ void main()
 	ClearMessage();
 
 	DisableWindow();
-	PlayBGM( 2, "msys12", 128, 0 );
+	if (GetGlobalFlag(GAltSEflow) == 0) { 	PlayBGM( 2, "msys12", 128, 0 ); }
+	if (GetGlobalFlag(GAltSEflow) == 1) { 	PlayBGM( 2, "Original\msys12", 128, 0 ); }
+	if (GetGlobalFlag(GAltSEflow) == 2) { 	PlayBGM( 2, "April2019Update\msys12", 128, 0 ); }
 	DrawScene("background/sora5", 500 );
 
 //　いつの間にか空は曇天＠

@@ -30,7 +30,9 @@ void main()
 //昭和６０年盛夏
 	DisableWindow();
 	DrawScene("black", 400 );
-	PlayBGM( 2, "lsys20", 128, 0 );
+	if (GetGlobalFlag(GAltSEflow) == 0) { 	PlayBGM( 2, "lsys20", 128, 0 ); }
+	if (GetGlobalFlag(GAltSEflow) == 1) { 	PlayBGM( 2, "Original\lsys20", 128, 0 ); }
+	if (GetGlobalFlag(GAltSEflow) == 2) { 	PlayBGM( 2, "April2019Update\lsys20", 128, 0 ); }
 	DrawScene("background/kukou1", 400 );
 //setwindow 31,16,22,16,26,26,0,2,20,1,1,#999999,0,0,639,479
 //!sd
@@ -272,7 +274,9 @@ void main()
 	DisableWindow();
 	FadeOutBGM( 2, 1000, FALSE );
 	DrawSceneWithMask("black", "c", 0, 0, 2000 );
-	PlayBGM( 2, "msys12", 128, 0 );
+	if (GetGlobalFlag(GAltSEflow) == 0) { 	PlayBGM( 2, "msys12", 128, 0 ); }
+	if (GetGlobalFlag(GAltSEflow) == 1) { 	PlayBGM( 2, "Original\msys12", 128, 0 ); }
+	if (GetGlobalFlag(GAltSEflow) == 2) { 	PlayBGM( 2, "April2019Update\msys12", 128, 0 ); }
 	DrawScene("text/s53", 1000 );
 	SetValidityOfInput( FALSE );
 	Wait( 2000 );
@@ -331,13 +335,17 @@ void main()
 	ClearMessage();
 
 	DisableWindow();
-	PlaySE( 3, "wa_020", 128, 64 );
+	if (GetGlobalFlag(GAltSEflow) == 0) { 	PlaySE( 3, "wa_020", 128, 64 ); }
+	if (GetGlobalFlag(GAltSEflow) == 1) { 	PlaySE( 3, "Original\wa_020", 128, 64 ); }
+	if (GetGlobalFlag(GAltSEflow) == 2) { 	PlaySE( 3, "April2019Update\wa_020", 128, 64 ); }
 	DrawSceneWithMask("black", "right", 0, 0, 200 );
 	SetValidityOfInput( FALSE );
 	Wait( 2000 );
 	SetValidityOfInput( TRUE );
 	DrawScene("white", 400 );
-	PlayBGM( 1, "msys01", 128, 0 );
+	if (GetGlobalFlag(GAltBGMflow) == 0) { 	PlayBGM( 1, "msys01", 128, 0 ); }
+	if (GetGlobalFlag(GAltBGMflow) == 1) { 	PlayBGM( 1, "Original\msys01", 128, 0 ); }
+	if (GetGlobalFlag(GAltBGMflow) == 2) { 	PlayBGM( 1, "April2019Update\msys01", 128, 0 ); }
 	DrawSceneWithMask("background/mati3", "up", 0, 0, 300 );
 
 //「でさ～～～、つってんだぜぇ？！＠
@@ -459,13 +467,17 @@ void main()
 		   NULL, "Last week, there was also a direct confrontation with Minister Inugai on the steps of the Ministry of Construction...\"", Line_Normal);
 	ClearMessage();
 
-	PlayBGM( 1, "msys12", 128, 0 );
-	PlayBGM( 2, "lsys22", 128, 0 );
+	if (GetGlobalFlag(GAltSEflow) == 0) { 	PlayBGM( 1, "msys12", 128, 0 ); }
+	if (GetGlobalFlag(GAltSEflow) == 1) { 	PlayBGM( 1, "Original\msys12", 128, 0 ); }
+	if (GetGlobalFlag(GAltSEflow) == 2) { 	PlayBGM( 1, "April2019Update\msys12", 128, 0 ); }
+	if (GetGlobalFlag(GAltSEflow) == 0) { 	PlayBGM( 2, "lsys22", 128, 0 ); }
+	if (GetGlobalFlag(GAltSEflow) == 1) { 	PlayBGM( 2, "Original\lsys22", 128, 0 ); }
+	if (GetGlobalFlag(GAltSEflow) == 2) { 	PlayBGM( 2, "April2019Update\lsys22", 128, 0 ); }
 
 //　犬飼建設大臣という名に、少年はぴくりと耳を動かした￥
 	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
 	OutputLine(NULL, "　犬飼建設大臣という名に、少年はぴくりと耳を動かした。",
-		   NULL, "The boy's ears perked up at the mention of the name "Inugai\".", Line_Normal);
+		   NULL, "The boy's ears perked up at the mention of the name "Inugai."", Line_Normal);
 	ClearMessage();
 
 
@@ -489,7 +501,9 @@ void main()
 		   NULL, "...His eyes meeting suddenly with the unfamiliar man, the boy panicked slightly...", Line_Normal);
 	ClearMessage();
 
-	PlayBGM( 2, "lsys15", 128, 0 );
+	if (GetGlobalFlag(GAltSEflow) == 0) { 	PlayBGM( 2, "lsys15", 128, 0 ); }
+	if (GetGlobalFlag(GAltSEflow) == 1) { 	PlayBGM( 2, "Original\lsys15", 128, 0 ); }
+	if (GetGlobalFlag(GAltSEflow) == 2) { 	PlayBGM( 2, "April2019Update\lsys15", 128, 0 ); }
 	FadeOutBGM( 1, 400, FALSE );
 
 //「……鶯、ＯＫ＠雲雀、ＯＫ＠前後２ブロック確保した＠……いいぞ…！＠
@@ -571,7 +585,9 @@ void main()
 	SetValidityOfInput( FALSE );
 	Wait( 1000 );
 	SetValidityOfInput( TRUE );
-	PlayBGM( 2, "lsys17", 128, 0 );
+	if (GetGlobalFlag(GAltSEflow) == 0) { 	PlayBGM( 2, "lsys17", 128, 0 ); }
+	if (GetGlobalFlag(GAltSEflow) == 1) { 	PlayBGM( 2, "Original\lsys17", 128, 0 ); }
+	if (GetGlobalFlag(GAltSEflow) == 2) { 	PlayBGM( 2, "April2019Update\lsys17", 128, 0 ); }
 	SetValidityOfInput( FALSE );
 	Wait( 7000 );
 	SetValidityOfInput( TRUE );
@@ -777,7 +793,9 @@ void main()
 	ClearMessage();
 
 
-	PlayBGM( 1, "msys15", 128, 0 );
+	if (GetGlobalFlag(GAltBGMflow) == 0) { 	PlayBGM( 1, "msys15", 128, 0 ); }
+	if (GetGlobalFlag(GAltBGMflow) == 1) { 	PlayBGM( 1, "Original\msys15", 128, 0 ); }
+	if (GetGlobalFlag(GAltBGMflow) == 2) { 	PlayBGM( 1, "April2019Update\msys15", 128, 0 ); }
 
 //「………………アナタガ名乗ッテクレナイカラ困ッテンデスヨ＠アンタガ犬飼大臣ジャナイナラ、サッサト電話ヲ切ッテ下サイ。＠
 	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#f5e6d3>誘拐犯</color>", NULL, "<color=#f5e6d3>Kidnapper</color>", NULL, Line_ContinueAfterTyping); }
@@ -1001,7 +1019,9 @@ void main()
 	ClearMessage();
 
 
-	PlayBGM( 1, "msys11", 128, 0 );
+	if (GetGlobalFlag(GAltSEflow) == 0) { 	PlayBGM( 1, "msys11", 128, 0 ); }
+	if (GetGlobalFlag(GAltSEflow) == 1) { 	PlayBGM( 1, "Original\msys11", 128, 0 ); }
+	if (GetGlobalFlag(GAltSEflow) == 2) { 	PlayBGM( 1, "April2019Update\msys11", 128, 0 ); }
 
 //「……開ケテクレマシタカ＠　ソコニアル物ガ何カ、ワカリマスヨネ？＠
 	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#f5e6d3>誘拐犯</color>", NULL, "<color=#f5e6d3>Kidnapper</color>", NULL, Line_ContinueAfterTyping); }
@@ -1109,7 +1129,9 @@ void main()
 		   NULL, "...On top of the folders crammed into the drawer, it lay there.", Line_Normal);
 	ClearMessage();
 
-	PlaySE( 4, "wa_023", 128, 64 );
+	if (GetGlobalFlag(GAltSEflow) == 0) { 	PlaySE( 4, "wa_023", 128, 64 ); }
+	if (GetGlobalFlag(GAltSEflow) == 1) { 	PlaySE( 4, "Original\wa_023", 128, 64 ); }
+	if (GetGlobalFlag(GAltSEflow) == 2) { 	PlaySE( 4, "April2019Update\wa_023", 128, 64 ); }
 //『いぬがいとしき＠
 	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
 	OutputLine(NULL, "『いぬかいとしき』",
@@ -1170,7 +1192,9 @@ void main()
 //!sd
 
 	DisableWindow();
-	PlayBGM( 1, "msys26", 128, 0 );
+	if (GetGlobalFlag(GAltBGMflow) == 0) { 	PlayBGM( 1, "msys26", 128, 0 ); }
+	if (GetGlobalFlag(GAltBGMflow) == 1) { 	PlayBGM( 1, "Original\msys26", 128, 0 ); }
+	if (GetGlobalFlag(GAltBGMflow) == 2) { 	PlayBGM( 1, "April2019Update\msys26", 128, 0 ); }
 	DrawScene("background/sinryou_sinsatu4", 1000 );
 
 //　………覚えてるかい、雪絵＠この写真￥
@@ -1456,7 +1480,9 @@ void main()
 
 	DisableWindow();
 	DrawScene("white", 400 );
-	PlayBGM( 2, "lsys12", 128, 0 );
+	if (GetGlobalFlag(GAltSEflow) == 0) { 	PlayBGM( 2, "lsys12", 128, 0 ); }
+	if (GetGlobalFlag(GAltSEflow) == 1) { 	PlayBGM( 2, "Original\lsys12", 128, 0 ); }
+	if (GetGlobalFlag(GAltSEflow) == 2) { 	PlayBGM( 2, "April2019Update\lsys12", 128, 0 ); }
 	DrawSceneWithMask("background/ke2", "left", 0, 0, 300 );
 
 //　部屋を出たところで、初老の男と鉢合せした＠
@@ -1574,7 +1600,9 @@ void main()
 	DrawSceneWithMask("white", "left", 0, 0, 300 );
 	FadeOutBGM( 1, 1000, FALSE );
 	FadeOutBGM( 1, 1000, TRUE );
-	PlayBGM( 2, "lsys29", 128, 0 );
+	if (GetGlobalFlag(GAltSEflow) == 0) { 	PlayBGM( 2, "lsys29", 128, 0 ); }
+	if (GetGlobalFlag(GAltSEflow) == 1) { 	PlayBGM( 2, "Original\lsys29", 128, 0 ); }
+	if (GetGlobalFlag(GAltSEflow) == 2) { 	PlayBGM( 2, "April2019Update\lsys29", 128, 0 ); }
 	DrawSceneWithMask("background/kuruma5_01", "left", 0, 0, 300 );
 
 //　表に待たせてあったタクシーに飛び乗る￥
@@ -1787,7 +1815,9 @@ void main()
 	ClearMessage();
 
 
-	PlayBGM( 1, "msys07", 128, 0 );
+	if (GetGlobalFlag(GAltBGMflow) == 0) { 	PlayBGM( 1, "msys07", 128, 0 ); }
+	if (GetGlobalFlag(GAltBGMflow) == 1) { 	PlayBGM( 1, "Original\msys07", 128, 0 ); }
+	if (GetGlobalFlag(GAltBGMflow) == 2) { 	PlayBGM( 1, "April2019Update\msys07", 128, 0 ); }
 
 //「推定４８時間前、建設大臣の孫にあたる、建設省幹部の子息が誘拐された模様です＠建設大臣は事態を穏便に済ませるため、警察へ通報せず、要求に応じるものと思われます。￥
 	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#f5e6d3>室長</color>", NULL, "<color=#f5e6d3>Chief</color>", NULL, Line_ContinueAfterTyping); }
@@ -2166,7 +2196,9 @@ void main()
 
 	DisableWindow();
 	DrawScene("black", 400 );
-	PlayBGM( 1, "msys12", 128, 0 );
+	if (GetGlobalFlag(GAltSEflow) == 0) { 	PlayBGM( 1, "msys12", 128, 0 ); }
+	if (GetGlobalFlag(GAltSEflow) == 1) { 	PlayBGM( 1, "Original\msys12", 128, 0 ); }
+	if (GetGlobalFlag(GAltSEflow) == 2) { 	PlayBGM( 1, "April2019Update\msys12", 128, 0 ); }
 
 //　…妻の出産を間近に控えた私としては、出張などしたくはなかった＠
 	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
@@ -2234,7 +2266,9 @@ void main()
 	DisableWindow();
 	FadeOutBGM( 1, 1000, TRUE );
 	DrawSceneWithMask("white", "m1", 0, 0, 300 );
-	PlayBGM( 2, "lsys20", 128, 0 );
+	if (GetGlobalFlag(GAltSEflow) == 0) { 	PlayBGM( 2, "lsys20", 128, 0 ); }
+	if (GetGlobalFlag(GAltSEflow) == 1) { 	PlayBGM( 2, "Original\lsys20", 128, 0 ); }
+	if (GetGlobalFlag(GAltSEflow) == 2) { 	PlayBGM( 2, "April2019Update\lsys20", 128, 0 ); }
 	DrawScene("background/eki", 400 );
 
 //　…翌日、私は新幹線で名古屋に向かい、そこからはさらに乗り換えて××県へ向かった￥
@@ -2277,7 +2311,9 @@ void main()
 	ClearMessage();
 
 
-	PlaySE( 3, "wa_021", 128, 64 );
+	if (GetGlobalFlag(GAltSEflow) == 0) { 	PlaySE( 3, "wa_021", 128, 64 ); }
+	if (GetGlobalFlag(GAltSEflow) == 1) { 	PlaySE( 3, "Original\wa_021", 128, 64 ); }
+	if (GetGlobalFlag(GAltSEflow) == 2) { 	PlaySE( 3, "April2019Update\wa_021", 128, 64 ); }
 
 //　調査対象団体、「鬼ヶ淵死守同盟＠
 	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
@@ -2425,7 +2461,9 @@ void main()
 	DrawScene("background/ke_s2", 1000 );
 //setwindow 31,16,22,16,26,26,0,2,20,1,1,#999999,0,0,639,479
 //!sd
-	PlayBGM( 1, "msys12", 128, 0 );
+	if (GetGlobalFlag(GAltSEflow) == 0) { 	PlayBGM( 1, "msys12", 128, 0 ); }
+	if (GetGlobalFlag(GAltSEflow) == 1) { 	PlayBGM( 1, "Original\msys12", 128, 0 ); }
+	if (GetGlobalFlag(GAltSEflow) == 2) { 	PlayBGM( 1, "April2019Update\msys12", 128, 0 ); }
 
 //「鬼ヶ淵死守同盟ですか＠えぇ、地元ではかなり賑わせているようです。＠
 	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#797d8a>赤坂</color>", NULL, "<color=#797d8a>Akasaka</color>", NULL, Line_ContinueAfterTyping); }
@@ -2474,7 +2512,9 @@ void main()
 		   NULL, "The stack of papers they had prepared for me in the document room was by no means thin.", Line_Normal);
 	ClearMessage();
 
-	PlayBGM( 1, "msys07", 128, 0 );
+	if (GetGlobalFlag(GAltBGMflow) == 0) { 	PlayBGM( 1, "msys07", 128, 0 ); }
+	if (GetGlobalFlag(GAltBGMflow) == 1) { 	PlayBGM( 1, "Original\msys07", 128, 0 ); }
+	if (GetGlobalFlag(GAltBGMflow) == 2) { 	PlayBGM( 1, "April2019Update\msys07", 128, 0 ); }
 
 //「発足当初は、ごくごく平均的な住民運動だったんです＠それが、いつだかの流血事件を境に急にヒートアップしまして＠今では暴力主義団体か、それに準じるくらいの過激な勢力に成長したと言えますね。￥
 	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#f5e6d3>室長</color>", NULL, "<color=#f5e6d3>Chief</color>", NULL, Line_ContinueAfterTyping); }
@@ -2568,7 +2608,9 @@ void main()
 	if(GetGlobalFlag(GCensor) <= 2){ModCallScriptSection("hima_001_vm00_n01","dialog002");}
 	//VoiceMatchingEnd
 
-	PlaySE( 3, "wa_021", 128, 64 );
+	if (GetGlobalFlag(GAltSEflow) == 0) { 	PlaySE( 3, "wa_021", 128, 64 ); }
+	if (GetGlobalFlag(GAltSEflow) == 1) { 	PlaySE( 3, "Original\wa_021", 128, 64 ); }
+	if (GetGlobalFlag(GAltSEflow) == 2) { 	PlaySE( 3, "April2019Update\wa_021", 128, 64 ); }
 
 //　資料に記載された、鬼ヶ淵死守同盟に関連する犯歴リストを斜め読みする＠
 	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
@@ -2577,7 +2619,9 @@ void main()
 	if (GetGlobalFlag(GADVMode)) { ClearMessage(); } else { OutputLineAll(NULL, "\n\n", Line_ContinueAfterTyping); }
 
 
-	PlaySE( 3, "wa_021", 128, 64 );
+	if (GetGlobalFlag(GAltSEflow) == 0) { 	PlaySE( 3, "wa_021", 128, 64 ); }
+	if (GetGlobalFlag(GAltSEflow) == 1) { 	PlaySE( 3, "Original\wa_021", 128, 64 ); }
+	if (GetGlobalFlag(GAltSEflow) == 2) { 	PlaySE( 3, "April2019Update\wa_021", 128, 64 ); }
 
 //　…内容はどれも粗暴で、法を遵守しようとする気配は微塵も感じられないものばかりだった￥
 	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
@@ -2677,7 +2721,9 @@ void main()
 		   NULL, " ...See here? Can you tell how things started to heat up?\"", Line_Normal);
 	ClearMessage();
 
-	PlaySE( 3, "wa_021", 128, 64 );
+	if (GetGlobalFlag(GAltSEflow) == 0) { 	PlaySE( 3, "wa_021", 128, 64 ); }
+	if (GetGlobalFlag(GAltSEflow) == 1) { 	PlaySE( 3, "Original\wa_021", 128, 64 ); }
+	if (GetGlobalFlag(GAltSEflow) == 2) { 	PlaySE( 3, "April2019Update\wa_021", 128, 64 ); }
 
 //「…………事務所の放火＠…建設重機の破壊工作＠…破壊＠　まさか爆弾でも？＠
 	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#797d8a>赤坂</color>", NULL, "<color=#797d8a>Akasaka</color>", NULL, Line_ContinueAfterTyping); }
@@ -2862,7 +2908,9 @@ void main()
 
 	DisableWindow();
 	DrawScene("background/jt1", 400 );
-	PlayBGM( 2, "lsys15", 128, 0 );
+	if (GetGlobalFlag(GAltSEflow) == 0) { 	PlayBGM( 2, "lsys15", 128, 0 ); }
+	if (GetGlobalFlag(GAltSEflow) == 1) { 	PlayBGM( 2, "Original\lsys15", 128, 0 ); }
+	if (GetGlobalFlag(GAltSEflow) == 2) { 	PlayBGM( 2, "April2019Update\lsys15", 128, 0 ); }
 
 //　全てが…丸ごと村ぐるみなのだ＠
 	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
@@ -3053,7 +3101,9 @@ void main()
 		   NULL, " Could you take a look at this?\"", Line_Normal);
 	ClearMessage();
 
-	PlaySE( 3, "wa_021", 128, 64 );
+	if (GetGlobalFlag(GAltSEflow) == 0) { 	PlaySE( 3, "wa_021", 128, 64 ); }
+	if (GetGlobalFlag(GAltSEflow) == 1) { 	PlaySE( 3, "Original\wa_021", 128, 64 ); }
+	if (GetGlobalFlag(GAltSEflow) == 2) { 	PlaySE( 3, "April2019Update\wa_021", 128, 64 ); }
 
 //　……見て、少し驚く＠
 	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
@@ -3456,7 +3506,9 @@ void main()
 
 	FadeOutBGM( 1, 1000, FALSE );
 	FadeOutBGM( 2, 1000, FALSE );
-	PlaySE( 3, "wa_023", 128, 64 );
+	if (GetGlobalFlag(GAltSEflow) == 0) { 	PlaySE( 3, "wa_023", 128, 64 ); }
+	if (GetGlobalFlag(GAltSEflow) == 1) { 	PlaySE( 3, "Original\wa_023", 128, 64 ); }
+	if (GetGlobalFlag(GAltSEflow) == 2) { 	PlaySE( 3, "April2019Update\wa_023", 128, 64 ); }
 
 //「やるかもしれません＠…底の知れない連中ですから。＠
 	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#f5e6d3>室長</color>", NULL, "<color=#f5e6d3>Chief</color>", NULL, Line_ContinueAfterTyping); }
@@ -3484,13 +3536,17 @@ void main()
 
 	DisableWindow();
 	DrawScene("black", 400 );
-	PlayBGM( 2, "lsys17", 128, 0 );
+	if (GetGlobalFlag(GAltSEflow) == 0) { 	PlayBGM( 2, "lsys17", 128, 0 ); }
+	if (GetGlobalFlag(GAltSEflow) == 1) { 	PlayBGM( 2, "Original\lsys17", 128, 0 ); }
+	if (GetGlobalFlag(GAltSEflow) == 2) { 	PlayBGM( 2, "April2019Update\lsys17", 128, 0 ); }
 	SetValidityOfInput( FALSE );
 	Wait( 2000 );
 	SetValidityOfInput( TRUE );
 	FadeOutBGM( 2, 1000, TRUE );
 	DrawSceneWithMask("background/denwa", "up", 0, 0, 300 );
-	PlayBGM( 2, "lsys20", 128, 0 );
+	if (GetGlobalFlag(GAltSEflow) == 0) { 	PlayBGM( 2, "lsys20", 128, 0 ); }
+	if (GetGlobalFlag(GAltSEflow) == 1) { 	PlayBGM( 2, "Original\lsys20", 128, 0 ); }
+	if (GetGlobalFlag(GAltSEflow) == 2) { 	PlayBGM( 2, "April2019Update\lsys20", 128, 0 ); }
 
 //「……お、赤坂くんか＠ご苦労さん＠××県警での情報収集はどうですか。＠
 	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#f5e6d3>室長</color>", NULL, "<color=#f5e6d3>Chief</color>", NULL, Line_ContinueAfterTyping); }
@@ -3599,7 +3655,9 @@ void main()
 	ClearMessage();
 
 	DisableWindow();
-	PlayBGM( 2, "lsys20", 128, 0 );
+	if (GetGlobalFlag(GAltSEflow) == 0) { 	PlayBGM( 2, "lsys20", 128, 0 ); }
+	if (GetGlobalFlag(GAltSEflow) == 1) { 	PlayBGM( 2, "Original\lsys20", 128, 0 ); }
+	if (GetGlobalFlag(GAltSEflow) == 2) { 	PlayBGM( 2, "April2019Update\lsys20", 128, 0 ); }
 	DrawScene("background/kuruma6", 400 );
 
 //　向かうは、××県鹿骨市＠
@@ -3649,8 +3707,12 @@ void main()
 	DrawSceneWithMask("background/ke1", "left", 0, 0, 300 );
 //setwindow 31,16,22,16,26,26,0,2,20,1,1,#999999,0,0,639,479
 //!sd
-	PlayBGM( 1, "msys12", 128, 0 );
-	PlayBGM( 2, "lsys22", 128, 0 );
+	if (GetGlobalFlag(GAltSEflow) == 0) { 	PlayBGM( 1, "msys12", 128, 0 ); }
+	if (GetGlobalFlag(GAltSEflow) == 1) { 	PlayBGM( 1, "Original\msys12", 128, 0 ); }
+	if (GetGlobalFlag(GAltSEflow) == 2) { 	PlayBGM( 1, "April2019Update\msys12", 128, 0 ); }
+	if (GetGlobalFlag(GAltSEflow) == 0) { 	PlayBGM( 2, "lsys22", 128, 0 ); }
+	if (GetGlobalFlag(GAltSEflow) == 1) { 	PlayBGM( 2, "Original\lsys22", 128, 0 ); }
+	if (GetGlobalFlag(GAltSEflow) == 2) { 	PlayBGM( 2, "April2019Update\lsys22", 128, 0 ); }
 
 //　鹿骨市は、地方都市の中では廃れた部類に入る町だった＠
 	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
@@ -3911,7 +3973,9 @@ void main()
 
 	DisableWindow();
 	FadeOutBGM( 2, 400, TRUE );
-	PlayBGM( 1, "msys32", 128, 0 );
+	if (GetGlobalFlag(GAltBGMflow) == 0) { 	PlayBGM( 1, "msys32", 128, 0 ); }
+	if (GetGlobalFlag(GAltBGMflow) == 1) { 	PlayBGM( 1, "Original\msys32", 128, 0 ); }
+	if (GetGlobalFlag(GAltBGMflow) == 2) { 	PlayBGM( 1, "April2019Update\msys32", 128, 0 ); }
 	ModDrawCharacterWithFiltering(3, 11, "sprite/normal/oisi1_1_", "0", "left", 1, 160, 0, FALSE, 0, 0, 0, 0, 0, 20, 300, TRUE );
 
 //「何の話をしてるかと思えば＠んっふっふっふっふ！＠
@@ -3997,7 +4061,9 @@ void main()
 		   NULL, " Regarding the S File you were asking about, he's familiar with it.\"", GetGlobalFlag(GLinemodeSp));
 	if (GetGlobalFlag(GADVMode)) { ClearMessage(); } else { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
 
-	PlaySE( 4, "wa_026", 128, 64 );
+	if (GetGlobalFlag(GAltSEflow) == 0) { 	PlaySE( 4, "wa_026", 128, 64 ); }
+	if (GetGlobalFlag(GAltSEflow) == 1) { 	PlaySE( 4, "Original\wa_026", 128, 64 ); }
+	if (GetGlobalFlag(GAltSEflow) == 2) { 	PlaySE( 4, "April2019Update\wa_026", 128, 64 ); }
 
 //「……Ｓ号？￥
 	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#797d8a>赤坂</color>", NULL, "<color=#797d8a>Akasaka</color>", NULL, Line_ContinueAfterTyping); }
@@ -4009,7 +4075,9 @@ void main()
 	DisableWindow();
 	FadeOutBGM( 1, 400, TRUE );
 	StopSE( 3 );
-	PlayBGM( 1, "msys15", 128, 0 );
+	if (GetGlobalFlag(GAltBGMflow) == 0) { 	PlayBGM( 1, "msys15", 128, 0 ); }
+	if (GetGlobalFlag(GAltBGMflow) == 1) { 	PlayBGM( 1, "Original\msys15", 128, 0 ); }
+	if (GetGlobalFlag(GAltBGMflow) == 2) { 	PlayBGM( 1, "April2019Update\msys15", 128, 0 ); }
 	ModDrawCharacter(3, 11, "sprite/normal/oisi1_1_", "0", 160, 0, 0, FALSE, 0, 0, 0, 0, 0, 0, 0, 20, 200, TRUE );
 
 //「園崎のＳ＠Ｓ号ってのはですね、園崎家が関連してる件を示す…、まぁ暗号みたいなもんなんです。＠
@@ -4259,7 +4327,9 @@ void main()
 	SetValidityOfInput( FALSE );
 	Wait( 1000 );
 	SetValidityOfInput( TRUE );
-	PlayBGM( 2, "lsys20", 128, 0 );
+	if (GetGlobalFlag(GAltSEflow) == 0) { 	PlayBGM( 2, "lsys20", 128, 0 ); }
+	if (GetGlobalFlag(GAltSEflow) == 1) { 	PlayBGM( 2, "Original\lsys20", 128, 0 ); }
+	if (GetGlobalFlag(GAltSEflow) == 2) { 	PlayBGM( 2, "April2019Update\lsys20", 128, 0 ); }
 	DrawScene("background/kuruma6", 400 );
 	SetValidityOfInput( FALSE );
 	Wait( 2000 );
@@ -4622,7 +4692,9 @@ void main()
 
 	DisableWindow();
 	DrawScene("background/kuruma1", 400 );
-	PlayBGM( 1, "msys08", 128, 0 );
+	if (GetGlobalFlag(GAltBGMflow) == 0) { 	PlayBGM( 1, "msys08", 128, 0 ); }
+	if (GetGlobalFlag(GAltBGMflow) == 1) { 	PlayBGM( 1, "Original\msys08", 128, 0 ); }
+	if (GetGlobalFlag(GAltBGMflow) == 2) { 	PlayBGM( 1, "April2019Update\msys08", 128, 0 ); }
 
 //「…こ、これは何ですか？＠　検問？！＠
 	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#797d8a>赤坂</color>", NULL, "<color=#797d8a>Akasaka</color>", NULL, Line_ContinueAfterTyping); }
@@ -4654,7 +4726,9 @@ void main()
 
 	DisableWindow();
 	DrawSceneWithMask("black", "left", 0, 0, 300 );
-	PlayBGM( 2, "lsys12", 128, 0 );
+	if (GetGlobalFlag(GAltSEflow) == 0) { 	PlayBGM( 2, "lsys12", 128, 0 ); }
+	if (GetGlobalFlag(GAltSEflow) == 1) { 	PlayBGM( 2, "Original\lsys12", 128, 0 ); }
+	if (GetGlobalFlag(GAltSEflow) == 2) { 	PlayBGM( 2, "April2019Update\lsys12", 128, 0 ); }
 	DrawSceneWithMask("background/kuruma3", "left", 0, 0, 300 );
 
 
@@ -4872,7 +4946,9 @@ void main()
 	FadeOutBGM( 1, 1000, FALSE );
 	FadeOutBGM( 2, 1000, TRUE );
 	DrawSceneWithMask("background/kuruma2", "right", 0, 0, 300 );
-	PlayBGM( 2, "lsys20", 128, 0 );
+	if (GetGlobalFlag(GAltSEflow) == 0) { 	PlayBGM( 2, "lsys20", 128, 0 ); }
+	if (GetGlobalFlag(GAltSEflow) == 1) { 	PlayBGM( 2, "Original\lsys20", 128, 0 ); }
+	if (GetGlobalFlag(GAltSEflow) == 2) { 	PlayBGM( 2, "April2019Update\lsys20", 128, 0 ); }
 
 //「何ですか、さっきのは＠勝手に公道を封鎖するなんて…！＠
 	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#797d8a>赤坂</color>", NULL, "<color=#797d8a>Akasaka</color>", NULL, Line_ContinueAfterTyping); }
@@ -5052,7 +5128,9 @@ void main()
 	DisableWindow();
 	FadeOutBGM( 2, 1000, FALSE );
 	DrawScene("black", 400 );
-	PlaySE( 3, "wa_026", 128, 64 );
+	if (GetGlobalFlag(GAltSEflow) == 0) { 	PlaySE( 3, "wa_026", 128, 64 ); }
+	if (GetGlobalFlag(GAltSEflow) == 1) { 	PlaySE( 3, "Original\wa_026", 128, 64 ); }
+	if (GetGlobalFlag(GAltSEflow) == 2) { 	PlaySE( 3, "April2019Update\wa_026", 128, 64 ); }
 
 //「ここはね、戦争地帯なんですよ。￥
 	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#a59da9>大石</color>", NULL, "<color=#a59da9>Ooishi</color>", NULL, Line_ContinueAfterTyping); }
@@ -5069,7 +5147,9 @@ void main()
 	ClearMessage();
 
 	DisableWindow();
-	PlayBGM( 1, "msys12", 128, 0 );
+	if (GetGlobalFlag(GAltSEflow) == 0) { 	PlayBGM( 1, "msys12", 128, 0 ); }
+	if (GetGlobalFlag(GAltSEflow) == 1) { 	PlayBGM( 1, "Original\msys12", 128, 0 ); }
+	if (GetGlobalFlag(GAltSEflow) == 2) { 	PlayBGM( 1, "April2019Update\msys12", 128, 0 ); }
 	DrawSceneWithMask("background/m_hi8", "right", 0, 0, 300 );
 
 //「あそこの森の中に家があるのが見えます＠　古い感じの。＠
@@ -5301,7 +5381,9 @@ void main()
 	if (GetGlobalFlag(GADVMode)) { ClearMessage(); } else { OutputLineAll(NULL, "\n\n", Line_ContinueAfterTyping); }
 
 
-	PlayBGM( 1, "msys12", 128, 0 );
+	if (GetGlobalFlag(GAltSEflow) == 0) { 	PlayBGM( 1, "msys12", 128, 0 ); }
+	if (GetGlobalFlag(GAltSEflow) == 1) { 	PlayBGM( 1, "Original\msys12", 128, 0 ); }
+	if (GetGlobalFlag(GAltSEflow) == 2) { 	PlayBGM( 1, "April2019Update\msys12", 128, 0 ); }
 
 //　御三家の公由家でも、古手家でもなく、…現在の雛見沢村と鬼ヶ淵死守同盟を影から支配する＠……最後の御三家￥
 	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
@@ -5498,7 +5580,9 @@ void main()
 	if (GetGlobalFlag(GADVMode)) { ClearMessage(); } else { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
 
 
-	PlayBGM( 1, "msys16", 128, 0 );
+	if (GetGlobalFlag(GAltSEflow) == 0) { 	PlayBGM( 1, "msys16", 128, 0 ); }
+	if (GetGlobalFlag(GAltSEflow) == 1) { 	PlayBGM( 1, "Original\msys16", 128, 0 ); }
+	if (GetGlobalFlag(GAltSEflow) == 2) { 	PlayBGM( 1, "April2019Update\msys16", 128, 0 ); }
 
 //「だから、直訴事件でマークが付いたっての＠嘘でしょ？￥
 	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#a59da9>大石</color>", NULL, "<color=#a59da9>Ooishi</color>", NULL, Line_ContinueAfterTyping); }
@@ -5575,7 +5659,9 @@ void main()
 	SetValidityOfInput( FALSE );
 	DrawScene("background/kuruma1_02", 3000 );
 	SetValidityOfInput( TRUE );
-	PlayBGM( 1, "msys11", 128, 0 );
+	if (GetGlobalFlag(GAltSEflow) == 0) { 	PlayBGM( 1, "msys11", 128, 0 ); }
+	if (GetGlobalFlag(GAltSEflow) == 1) { 	PlayBGM( 1, "Original\msys11", 128, 0 ); }
+	if (GetGlobalFlag(GAltSEflow) == 2) { 	PlayBGM( 1, "April2019Update\msys11", 128, 0 ); }
 
 //　……大石氏が根負けするまで、外ののどかな景色を満喫していればいいだけなのだから￥
 	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
@@ -5629,7 +5715,9 @@ void main()
 
 	DisableWindow();
 	FadeOutBGM( 1, 1000, TRUE );
-	PlayBGM( 2, "lsys20", 128, 0 );
+	if (GetGlobalFlag(GAltSEflow) == 0) { 	PlayBGM( 2, "lsys20", 128, 0 ); }
+	if (GetGlobalFlag(GAltSEflow) == 1) { 	PlayBGM( 2, "Original\lsys20", 128, 0 ); }
+	if (GetGlobalFlag(GAltSEflow) == 2) { 	PlayBGM( 2, "April2019Update\lsys20", 128, 0 ); }
 	DrawSceneWithMask("background/kuruma2_02", "left", 0, 0, 300 );
 
 //「…素直なところを教えてくれりゃあ、もっとお力になれると思ったんですがね。＠
@@ -5833,7 +5921,9 @@ void main()
 
 
 	FadeOutBGM( 2, 1000, TRUE );
-	PlayBGM( 1, "msys32", 128, 0 );
+	if (GetGlobalFlag(GAltBGMflow) == 0) { 	PlayBGM( 1, "msys32", 128, 0 ); }
+	if (GetGlobalFlag(GAltBGMflow) == 1) { 	PlayBGM( 1, "Original\msys32", 128, 0 ); }
+	if (GetGlobalFlag(GAltBGMflow) == 2) { 	PlayBGM( 1, "April2019Update\msys32", 128, 0 ); }
 
 //「…大石さんほどの方が無償で力になって下さるとは、ちょっと思いがたいですが…？＠
 	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#797d8a>赤坂</color>", NULL, "<color=#797d8a>Akasaka</color>", NULL, Line_ContinueAfterTyping); }
@@ -6069,7 +6159,9 @@ void main()
 	ClearMessage();
 
 
-	PlayBGM( 1, "msys11", 128, 0 );
+	if (GetGlobalFlag(GAltSEflow) == 0) { 	PlayBGM( 1, "msys11", 128, 0 ); }
+	if (GetGlobalFlag(GAltSEflow) == 1) { 	PlayBGM( 1, "Original\msys11", 128, 0 ); }
+	if (GetGlobalFlag(GAltSEflow) == 2) { 	PlayBGM( 1, "April2019Update\msys11", 128, 0 ); }
 
 //「……鬼ヶ淵死守同盟が、ある事件に関与しているか否かを調査しています。＠
 	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#797d8a>赤坂</color>", NULL, "<color=#797d8a>Akasaka</color>", NULL, Line_ContinueAfterTyping); }
@@ -6324,7 +6416,9 @@ void main()
 		   NULL, "...He said something that was really just a little bit strange.", Line_Normal);
 	ClearMessage();
 
-	PlayBGM( 1, "msys15", 128, 0 );
+	if (GetGlobalFlag(GAltBGMflow) == 0) { 	PlayBGM( 1, "msys15", 128, 0 ); }
+	if (GetGlobalFlag(GAltBGMflow) == 1) { 	PlayBGM( 1, "Original\msys15", 128, 0 ); }
+	if (GetGlobalFlag(GAltBGMflow) == 2) { 	PlayBGM( 1, "April2019Update\msys15", 128, 0 ); }
 
 //「……………………明治前まではですね＠この辺りは雛見沢村って名前じゃなくて、鬼ヶ淵村って呼ばれてたそうで..\n\n<
 //_@
